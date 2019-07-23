@@ -27,15 +27,13 @@ namespace ModernConsoleAppTemplate
 
             logger.LogCritical("Hello World Critical");
 
-            //have to have this for logging to show up in the console
-            //I would assume this would go away once I see some real work
-            //Console.ReadLine();
-
-            //Console.WriteLine();
-
             //get the thing(s) I want to do work
             var myService = serviceProvider.GetService<IMyService>();
             myService.DoWork();
+
+            //have to have this for logging to show up in the console
+            //I would assume this would go away once I see some real work
+            //Console.ReadLine();
         }
     }
 }
