@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29111.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modern Console App Template", "Modern Console App Template\Modern Console App Template.csproj", "{46F715DC-0D54-4F91-BA62-6C86366D09C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{803DCE0D-4A79-4DDC-978F-C2A844F5E188}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46F715DC-0D54-4F91-BA62-6C86366D09C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46F715DC-0D54-4F91-BA62-6C86366D09C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46F715DC-0D54-4F91-BA62-6C86366D09C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46F715DC-0D54-4F91-BA62-6C86366D09C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {057EAFC5-45E1-4069-9969-0193887AB8C8}
+	EndGlobalSection
+EndGlobal
