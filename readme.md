@@ -1,7 +1,7 @@
 Very rough VS Project Template for a .NET Core Console app
 with Dependency Injection, Configuration and Logging
 
-![console screenshot of logging and custom config](readme-media/console-logging.png)
+![console screenshot of logging and custom config](readme-media/console-logging-workaround.png)
 
 [Developer Community Feature Request](https://developercommunity.visualstudio.com/idea/651671/net-core-console-template-with-di-logging-config.html)
 
