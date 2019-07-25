@@ -25,9 +25,8 @@ namespace ModernConsoleAppTemplate
             var builder = new ConfigurationBuilder()
                     .SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                    //.AddJsonFile($"appsettings.{env}.json", optional: false, reloadOnChange: true)
-                    .AddJsonFile($"appsettings.local.json", optional: false, reloadOnChange: true);
-                    //.AddEnvironmentVariables();
+                    .AddJsonFile($"appsettings.{env}.json", optional: false, reloadOnChange: true)
+                    .AddEnvironmentVariables();
 
             return builder.Build();
         }
@@ -51,10 +50,10 @@ namespace ModernConsoleAppTemplate
                 //todo should verify this the current way to do this
                 configure.AddConfiguration(config.GetSection("Logging"));
 
-                //configure.SetMinimumLevel(LogLevel.Trace);
-
+                //add Console window logging
                 configure.AddConsole();
-                //add VS output window
+
+                //add VS output window logging
                 configure.AddDebug();
             });
 
