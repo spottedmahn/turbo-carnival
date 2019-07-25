@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using ModernConsoleAppTemplate.SampleService;
+using System;
 using System.IO;
 
 namespace ModernConsoleAppTemplate
@@ -19,6 +20,8 @@ namespace ModernConsoleAppTemplate
 
         private static IConfigurationRoot InitConfig()
         {
+            var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+
             var builder = new ConfigurationBuilder()
                     .SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -42,14 +45,18 @@ namespace ModernConsoleAppTemplate
         {
             services.AddLogging(configure =>
             {
-                configure.SetMinimumLevel(LogLevel.Trace);
+                //wire up logging to configuration
+                //pulled from C:\Users\mdepouw\source\repos\GitHub\spottedmahn\AspNetCore\src\DefaultBuilder\src\WebHost.cs
+                //I can't find the current location on GitHub
+                //todo should verify this the current way to do this
+                configure.AddConfiguration(config.GetSection("Logging"));
+
+                //configure.SetMinimumLevel(LogLevel.Trace);
+
                 configure.AddConsole();
                 //add VS output window
                 configure.AddDebug();
             });
-
-            //todo - wire up logging to configuration
-            //services.Configure<LoggerFilterOptions>(options => options.MinLevel = LogLevel.Trace);
 
             //add custom services here
             services.AddTransient<IMyService, MyService>();
